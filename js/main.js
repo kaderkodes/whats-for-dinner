@@ -3,8 +3,9 @@ document.querySelector('button').addEventListener('click', getFood)
 
 
 function getFood() {
-  fetch("https:www.themealdb.com/api/json/v1/1/random.php")
-    .then(res => res.json()) // parse response as JSON
+  const url = "https:www.themealdb.com/api/json/v1/1/random.php"
+  fetch(url)
+    .then(res => res.json()) 
     .then(data => {
       console.log(data.meals[0])
 
